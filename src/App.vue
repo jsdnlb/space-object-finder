@@ -1,13 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view /> -->
+    <SearchObjectSpace></SearchObjectSpace>
   </div>
 </template>
+<script>
+// @ is an alias to /src
+import SearchObjectSpace from "@/components/SearchObjectSpace.vue";
 
+export default {
+  name: "app",
+  components: {
+    SearchObjectSpace,
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
