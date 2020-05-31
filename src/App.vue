@@ -11,7 +11,7 @@
           width="50"
         />
       </div>
-      <h2 class="d-md-flex d-none xs">Search Object in Space</h2>
+      <h2 class="d-md-flex d-none xs">Búsqueda de objetos espaciales</h2>
 
       <v-spacer></v-spacer>
 
