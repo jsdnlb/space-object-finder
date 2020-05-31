@@ -3,7 +3,9 @@
     <v-container>
       <v-row no-gutters>
         <v-col cols="12">
-          <h2>{{ msg }}</h2>
+          <h2>{{ title }}</h2>
+          <p>{{ subtitle }}</p>
+
           <form v-on:submit.prevent="getResult(query)">
             <v-text-field type="text" v-model="query" />
           </form>
@@ -27,6 +29,9 @@
           </v-card>
         </v-card>
       </div>
+      <div v-if="results.length == 0">
+        <h1>No se enontraron resultados relacionados con la búsqueda.</h1>
+      </div>
     </v-container>
   </div>
 </template>
@@ -36,7 +41,9 @@ export default {
   name: "search",
   data() {
     return {
-      msg: "¿Qué deseas buscar? ",
+      title: "¿Qué deseas buscar? ",
+      subtitle:
+        "Este es un simple buscador de imágenes de la NASA, sólo debes escribir una palabra para que se realice una búsqueda relacionada a su solicitud. Por el momento sólo se aceptan palabras en Inglés, pero enventualmente se implementará el idioma Español.",
       query: "",
       results: [],
     };
@@ -48,7 +55,7 @@ export default {
           "https://images-api.nasa.gov/search?q=" + query + "&media_type=image"
         )
         .then((response) => {
-          //   console.log("getResult -> response", response.data.collection.items);
+          console.log("getResult -> response", response.data.collection.items);
           this.results = response.data.collection.items;
         });
     },

@@ -6,12 +6,12 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
           transition="scale-transition"
-          width="40"
+          width="50"
         />
-        <h2>Search Object in Space</h2>
       </div>
+      <h2 class="d-md-flex d-none xs">Search Object in Space</h2>
 
       <v-spacer></v-spacer>
 
