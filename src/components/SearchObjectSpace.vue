@@ -1,15 +1,33 @@
 <template>
   <div class="search">
-    <h1>{{ title }}</h1>
-    <h2>{{ msg }}</h2>
-    <form v-on:submit.prevent="getResult(query)">
-      <input type="text" v-model="query" />
-    </form>
-    <div v-if="results">
-      <div v-for="result in results" :key="result.id">
-        <img v-bind:src="result.links[0].href" />
+    <v-container>
+      <v-row no-gutters>
+        <v-col cols="12">
+          <h2>{{ msg }}</h2>
+          <form v-on:submit.prevent="getResult(query)">
+            <v-text-field type="text" v-model="query" />
+          </form>
+        </v-col>
+      </v-row>
+      <div v-if="results">
+        <v-card
+          class="d-flex align-content-start flex-wrap"
+          flat
+          tile
+          min-height="200"
+        >
+          <v-card
+            v-for="result in results"
+            :key="result.id"
+            class="pa-2"
+            outlined
+            tile
+          >
+            <img v-bind:src="result.links[0].href" height="200" />
+          </v-card>
+        </v-card>
       </div>
-    </div>
+    </v-container>
   </div>
 </template>
 <script>
@@ -18,7 +36,6 @@ export default {
   name: "search",
   data() {
     return {
-      title: "Search Objet in Space",
       msg: "¿Qué deseas buscar? ",
       query: "",
       results: [],
