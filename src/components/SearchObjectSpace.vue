@@ -41,13 +41,14 @@
 </template>
 <script>
 import axios from "axios";
+import Swal from "sweetalert2";
 export default {
   name: "search",
   data() {
     return {
       title: "¿Qué deseas buscar? ",
       subtitle:
-        "Este es un simple buscador de imágenes de la NASA, sólo debes escribir una palabra para que se realice una búsqueda relacionada a su solicitud. Por el momento sólo se aceptan palabras en Inglés, pero enventualmente se implementará el idioma Español.",
+        "Este es un simple buscador de imágenes de la NASA, sólo debes escribir una palabra para que se realice una búsqueda relacionada a su solicitud. Por el momento sólo se aceptan palabras en Inglés, pero eventualmente se implementará el idioma Español.",
       examples:
         "Trate de usar palabras clave, como nombres de planetas, galaxias, estrellas, misiones espaciales, astronautas, científicos astrónomos entre otros... Algunos ejemplos:{ Jupiter, Neptune, Moon, Sun, Demo-crew , Apollo 11, Neil Armstrong, Valentina Tereshkova, Elon Musk, Carl Sagan, Andromeda, Quasar } ",
       query: "",

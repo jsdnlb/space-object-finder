@@ -9,13 +9,14 @@
           src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
           transition="scale-transition"
           width="50"
+          @click="reloadPage()"
         />
       </div>
       <h2 class="d-md-flex d-none xs">Búsqueda de objetos espaciales</h2>
 
       <v-spacer></v-spacer>
 
-      <h4>Developed by: Daniel Buitrago</h4>
+      <h4>Desarrollado por: Daniel Buitrago</h4>
     </v-app-bar>
 
     <v-content>
@@ -37,5 +38,11 @@ export default {
   data: () => ({
     //
   }),
+  methods: {
+    reloadPage() {
+      window.scrollTo(0, 0);
+      location.reload();
+    },
+  },
 };
 </script>
