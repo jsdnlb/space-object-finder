@@ -60,6 +60,13 @@ export default {
   },
   methods: {
     getResult(query) {
+      Swal.fire({
+        title: "Un momento por favor",
+        text: "Estamos buscando las mejores imágenes",
+        onBeforeOpen: () => {
+          Swal.showLoading();
+        },
+      });
       axios
         .get(
           "https://images-api.nasa.gov/search?q=" + query + "&media_type=image"
@@ -68,6 +75,7 @@ export default {
           console.log("getResult -> response", response.data.collection.items);
           this.results = response.data.collection.items;
         });
+      Swal.close();
     },
   },
 };
