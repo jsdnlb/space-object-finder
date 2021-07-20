@@ -26,8 +26,7 @@ npm install
 npm run serve
 ```
 ## Home Page 🕶
-
-
+![space-object-finder](https://user-images.githubusercontent.com/17171887/126372083-dbf58b72-39ef-4175-8c1b-2dbc25a70cbf.png)
 ## Built with 🛠️
 
 _This project was developed with the following tools._

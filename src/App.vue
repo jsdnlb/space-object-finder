@@ -12,11 +12,13 @@
           @click="reloadPage()"
         />
       </div>
-      <h2 class="d-md-flex d-none xs">Búsqueda de objetos espaciales</h2>
+      <h2 class="d-md-flex d-none xs">Search for space objects</h2>
 
       <v-spacer></v-spacer>
 
-      <h4>Desarrollado por: Daniel Buitrago</h4>
+      <h4>
+        Developed by: <a href="https://github.com/jsdnlb">Daniel Buitrago</a>
+      </h4>
     </v-app-bar>
 
     <v-content>
@@ -24,7 +26,12 @@
     </v-content>
   </v-app>
 </template>
-
+<style scoped>
+h4, a{
+  color: white !important;
+  text-decoration: none;
+}
+</style>
 <script>
 import SearchObjectSpace from "./components/SearchObjectSpace";
 
