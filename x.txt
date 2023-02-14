@@ -3,3 +3,4 @@ Segundo commit quiero ignorar
 tercero no
 cuarto sí
 commit 5
+commit 6
